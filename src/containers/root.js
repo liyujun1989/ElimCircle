@@ -13,8 +13,8 @@ export default {
     childRoutes: [
         {
             component: ElimCircle,
-            path: 'circle',
-            title: '以琳·抽奖算法'
+            path: 'elim',
+            title: '以琳·聚会摇奖'
         },
         {
             component: WeChatCircle,
