@@ -1,12 +1,12 @@
 /**
- * 创建时间：2016年11月2日 13:52:16
+ * 创建时间：2016年11月14日 14:51:47
  * 创建人：JaminHuang
- * 描述：以琳·聚会随机抽取
+ * 描述：以琳聚会签到
  */
 'use strict';
 import React, { Component } from 'react';
 
-class ElimCircle extends Component {
+class Gather extends Component {
     constructor(props) {
         super(props);
     }
@@ -26,4 +26,5 @@ class ElimCircle extends Component {
     }
 }
 
-export default ElimCircle;
+export default Gather;
+

@@ -6,6 +6,7 @@
 'use strict';
 import Index from './';
 import { ElimCircle, WeChatCircle } from '../containers/circle/index';
+import { Gather } from '../containers/sign/index';
 
 export default {
     component: Index,
@@ -20,6 +21,11 @@ export default {
             component: WeChatCircle,
             path: 'wechat',
             title: '以琳·摇奖转盘'
+        },
+        {
+            component: WeChatCircle,
+            path: 'gather',
+            title: '以琳·聚会签到'
         }
     ]
 }
