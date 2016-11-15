@@ -23,7 +23,7 @@ export default {
             title: '以琳·摇奖转盘'
         },
         {
-            component: WeChatCircle,
+            component: Gather,
             path: 'gather',
             title: '以琳·聚会签到'
         }
