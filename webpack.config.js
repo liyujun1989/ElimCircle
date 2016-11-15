@@ -29,7 +29,7 @@ var config = {
         new webpack.HotModuleReplacementPlugin(),
         new webpack.DefinePlugin({
             'process.env': {
-                'DEBUG': true
+                'DEBUG': false
             }
         })
     ]
