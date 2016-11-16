@@ -28,6 +28,7 @@ class Gather extends Component {
         Request.FetchPost("api/Gather/Sign", {userName: userName, groupName: groupName, gatherType: "0"}).then(json=>{
             if (json.Code == 8200) {
                 alert('签到成功');
+                this.getSignCount("0");
             }
             else {
                 alert(json.ErrorMsg);
@@ -35,12 +36,21 @@ class Gather extends Component {
         })
     }
 
-    componentDidMount() {
+    /*获取签到人数*/
+    getSignCount(gatherType) {
         let that = this;
+        Request.FetchPost("api/Gather/GetSignCount", {gatherType: gatherType}).then(json=>{
+            if (json.Code == 8200) {
+                that.setState({preCount:that.state.count==null?0:that.state.count, count:json.Content});
+            }
+            else {
+                alert(json.ErrorMsg);
+            }
+        });
+    }
 
-        //获取当前签到人数
-        let nowCount = 33;
-        that.setState({preCount:that.state.count==null?0:that.state.count, count:nowCount});
+    componentDidMount() {
+        this.getSignCount("0");
 
         let selbtn = document.querySelectorAll('.select-btn li');
         let sels = document.querySelectorAll('.select-sel>li');
