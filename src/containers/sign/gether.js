@@ -139,7 +139,7 @@ class Gather extends Component {
                             <li><button onClick={this.signOnClick.bind(this,'林慧敏','以诺组')}>林慧敏</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'廖蒙福','以诺组')}>廖蒙福</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'诸葛衍昆','以诺组')}>诸葛衍昆</button></li>
-                            <li><button onClick={this.signOnClick.bind(this,'黄雪婷','以诺组')}>吴等等</button></li>
+                            <li><button onClick={this.signOnClick.bind(this,'吴婷婷','以诺组')}>吴婷婷</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'徐  旭','以诺组')}>徐  旭</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'温佳佳','以诺组')}>温佳佳</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'林启武','以诺组')}>林启武</button></li>
