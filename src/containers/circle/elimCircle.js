@@ -73,8 +73,10 @@ class ElimCircle extends Component {
                 <div className="box">
                     {this.state.nameList.map(n=>{ return <div className="boxName" key={_.uniqueId("nameList")}>{n}</div> })}
                 </div>
-                <div id="star"><a onClick={this.startClick.bind(this,this.state.count)}>开 始</a></div>
-                <div id="stop"><a onClick={this.endClick}>结 束</a></div>
+                <div className="btnDiv">
+                    <div id="star"><a onClick={this.startClick.bind(this,this.state.count)}>开 始</a></div>
+                    <div id="stop"><a onClick={this.endClick}>结 束</a></div>
+                </div>
                 <div className="foot">
                     <p>©版权所有  Grace & Elim 2016 | 以琳 • 网络事工组</p>
                 </div>
