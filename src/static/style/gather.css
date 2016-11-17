@@ -446,7 +446,7 @@ h3 span{
 .select-sel .show{
     display: block;
 }
-.yn ul,.zz ul, .hs ul{
+.yn ul,.zz ul, .hs ul, .fc ul{
     width: 100%;
     overflow: hidden;
     display: flex;
@@ -454,7 +454,7 @@ h3 span{
     justify-content:space-around ;
     align-items: center;
 }
-.yn ul li,.zz ul li,.hs ul li{
+.yn ul li,.zz ul li,.hs ul li, .fc ul li{
     width: 16%;
     height:6vw;
     margin:2% ;
@@ -462,10 +462,11 @@ h3 span{
 }
 
 /* 按钮样式 */
-.yn ul li button,.zz ul li button,.hs ul li button{
+.yn ul li button,.zz ul li button,.hs ul li button, .fc ul li button{
     width: 100%;
     height: 100%;
     font-size: 3vw;
+    cursor: pointer;
     background-color: #fff;
     outline: none;
     padding: 0;bottom: 0;
@@ -473,8 +474,18 @@ h3 span{
     border-radius: 5px;
 }
 
-/*.fc .file{
-}*/
+.fc-form {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.fc-form span{
+    font-size: 24px;
+}
+
+.fc-form input{
+    height:40px;
+}
 
 
 
@@ -482,7 +493,7 @@ h3 span{
     text-align: center;
 }
 .logo img{
-    width: 15%;
+    width: 5%;
     height: 20%;
 }
 .foot{
