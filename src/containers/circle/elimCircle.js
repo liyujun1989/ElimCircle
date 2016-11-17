@@ -5,22 +5,79 @@
  */
 'use strict';
 import React, { Component } from 'react';
+import moment from 'moment-timezone/moment-timezone';
+import { Request } from '../../server';
+import _ from 'lodash';
+
+import * as elimCircle from '../../static/style/elimCircle.css';
+
+let t;
+let i;
+let nList;
+
+let bs = true;
 
 class ElimCircle extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            nameList : [],
+            count : 0
+        }
+    }
+
+    startClick(count) {
+        loop();
+
+        function loop() {
+            t = setTimeout(loop, 25);
+            let r = Math.random() * count;
+            i = parseInt(r);
+
+            if (bs) {
+                nList[i].style.backgroundColor = "#CCFF00";
+                bs = false;
+            } else {
+                for (var j = 0; j < count; j++) { nList[j].style.backgroundColor = "#6666CC"; }
+                bs = true;
+            }
+        }
+    }
+
+    endClick() {
+        clearTimeout(t);
+        nList[i].style.backgroundColor = "#CCFF00";
     }
 
     componentWillMount() {
-
+        elimCircle.use();
     }
 
     componentDidMount() {
+        let nowDate = moment().locale('en').utcOffset(0);//获取当前时间
+        nList = document.getElementsByClassName("boxName");
+        Request.FetchPost("api/Gather/GetSignNameList", {gatherType: "0", date: nowDate}).then(json=>{
+            if (json.Code == 8200) {
+                this.setState({nameList:json.Content, count: json.Content.length});
+            }
+            else {
+                alert(json.ErrorMsg);
+            }
+        })
     }
 
     render() {
         return(
-            <div>
+            <div style={{textAlign:"center"}}>
+                <div className="title">以琳·聚会随机点名</div>
+                <div className="box">
+                    {this.state.nameList.map(n=>{ return <div className="boxName" key={_.uniqueId("nameList")}>{n}</div> })}
+                </div>
+                <div id="star"><a onClick={this.startClick.bind(this,this.state.count)}>开 始</a></div>
+                <div id="stop"><a onClick={this.endClick}>结 束</a></div>
+                <div className="foot">
+                    <p>©版权所有  Grace & Elim 2016 | 以琳 • 网络事工组</p>
+                </div>
             </div>
         );
     }
