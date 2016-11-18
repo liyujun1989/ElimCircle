@@ -6,7 +6,7 @@
 'use strict';
 import React, { Component } from 'react';
 import CountUp from 'react-countup';
-import { Request } from '../../server';
+import { Request, ResponseCode, Encrypt } from '../../server';
 
 import * as gatherStyle from '../../static/style/gather.css';
 
@@ -29,9 +29,9 @@ class Gather extends Component {
         if(userName == ""){
             userName = document.getElementById('txtUserName').value;
         }
-
-        Request.FetchPost("api/Gather/Sign", {userName: userName, groupName: groupName, gatherType: "0"}).then(json=>{
-            if (json.Code == 8200) {
+        let data = { body : Encrypt({userName: userName, groupName: groupName, gatherType: "0"})};
+        Request.FetchPost("api/Gather/Sign", data).then(json=>{
+            if (json.Code == ResponseCode.Success ) {
                 alert('签到成功');
                 document.getElementById('txtUserName').value = "";
                 this.getSignCount("0");
@@ -45,8 +45,9 @@ class Gather extends Component {
     /*获取签到人数*/
     getSignCount(gatherType) {
         let that = this;
-        Request.FetchPost("api/Gather/GetSignCount", {gatherType: gatherType}).then(json=>{
-            if (json.Code == 8200) {
+        let data = { body : Encrypt({gatherType: gatherType})};
+        Request.FetchPost("api/Gather/GetSignCount", data).then(json=>{
+            if (json.Code == ResponseCode.Success) {
                 that.setState({preCount:that.state.count==null?0:that.state.count, count:json.Content});
             }
             else {
