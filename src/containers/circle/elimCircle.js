@@ -6,7 +6,7 @@
 'use strict';
 import React, { Component } from 'react';
 import moment from 'moment-timezone/moment-timezone';
-import { Request } from '../../server';
+import { Request, ResponseCode, Encrypt } from '../../server';
 import _ from 'lodash';
 
 import * as elimCircle from '../../static/style/elimCircle.css';
@@ -56,8 +56,9 @@ class ElimCircle extends Component {
     componentDidMount() {
         let nowDate = moment().locale('en').utcOffset(0);//获取当前时间
         nList = document.getElementsByClassName("boxName");
-        Request.FetchPost("api/Gather/GetSignNameList", {gatherType: "0", date: nowDate}).then(json=>{
-            if (json.Code == 8200) {
+        let data = {body : Encrypt({gatherType: "0", date: nowDate})};
+        Request.FetchPost("api/Gather/GetSignNameList", data).then(json=>{
+            if (json.Code == ResponseCode.Success ) {
                 this.setState({nameList:json.Content, count: json.Content.length});
             }
             else {
