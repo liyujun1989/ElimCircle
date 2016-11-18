@@ -96,26 +96,26 @@ class Gather extends Component {
                             <li><button onClick={this.signOnClick.bind(this,'邵明凤','活石组')}>邵明凤</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'庄毓勋','活石组')}>庄毓勋</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'张欣悦','活石组')}>张欣悦</button></li>
-                            <li><button onClick={this.signOnClick.bind(this,'李  莹','活石组')}>李  莹</button></li>
+                            <li><button onClick={this.signOnClick.bind(this,'李莹','活石组')}>李  莹</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'朱淑怡','活石组')}>朱淑怡</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'庄佳佳','活石组')}>庄佳佳</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'胡事乐','活石组')}>胡事乐</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'刘乐慧','活石组')}>刘乐慧</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'黄章明','活石组')}>黄章明</button></li>
-                            <li><button onClick={this.signOnClick.bind(this,'罗  立','活石组')}>罗  立</button></li>
+                            <li><button onClick={this.signOnClick.bind(this,'罗立','活石组')}>罗  立</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'任佳琛','活石组')}>任佳琛</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'章奇妙','活石组')}>章奇妙</button></li>
-                            <li><button onClick={this.signOnClick.bind(this,'周  碧','活石组')}>周  碧</button></li>
-                            <li><button onClick={this.signOnClick.bind(this,'陈  高','活石组')}>玛  丽</button></li>
+                            <li><button onClick={this.signOnClick.bind(this,'周碧','活石组')}>周  碧</button></li>
+                            <li><button onClick={this.signOnClick.bind(this,'陈高','活石组')}>玛  丽</button></li>
                         </ul>
                     </li>
                     <li className="zz">
                         <ul>
                             <li><button onClick={this.signOnClick.bind(this,'徐晶晶','枝子组')}>徐晶晶</button></li>
-                            <li><button onClick={this.signOnClick.bind(this,'蒋  驰','枝子组')}>蒋  驰</button></li>
+                            <li><button onClick={this.signOnClick.bind(this,'蒋驰','枝子组')}>蒋  驰</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'许鹭鹭','枝子组')}>许鹭鹭</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'杨胜钰','枝子组')}>杨胜钰</button></li>
-                            <li><button onClick={this.signOnClick.bind(this,'李  强','枝子组')}>李  强</button></li>
+                            <li><button onClick={this.signOnClick.bind(this,'李强','枝子组')}>李  强</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'陈莉莉','枝子组')}>陈莉莉</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'陈志伟','枝子组')}>陈志伟</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'蔡福才','枝子组')}>蔡福才</button></li>
@@ -140,7 +140,7 @@ class Gather extends Component {
                             <li><button onClick={this.signOnClick.bind(this,'廖蒙福','以诺组')}>廖蒙福</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'诸葛衍昆','以诺组')}>诸葛衍昆</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'吴婷婷','以诺组')}>吴婷婷</button></li>
-                            <li><button onClick={this.signOnClick.bind(this,'徐  旭','以诺组')}>徐  旭</button></li>
+                            <li><button onClick={this.signOnClick.bind(this,'徐旭','以诺组')}>徐  旭</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'温佳佳','以诺组')}>温佳佳</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'林启武','以诺组')}>林启武</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'彭成平','以诺组')}>彭成平</button></li>
