@@ -125,8 +125,9 @@ class Gather extends Component {
                             <li><button onClick={this.signOnClick.bind(this,'张光程','枝子组')}>张光程</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'王佳璇','枝子组')}>王佳璇</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'姜恩威','枝子组')}>姜恩威</button></li>
-                            <li><button onClick={this.signOnClick.bind(this,'陈格格','枝子组')}>陈莹莹</button></li>
-                            <li><button onClick={this.signOnClick.bind(this,'陈格格','枝子组')}>郑中岳</button></li>
+                            <li><button onClick={this.signOnClick.bind(this,'陈莹莹','枝子组')}>陈莹莹</button></li>
+                            <li><button onClick={this.signOnClick.bind(this,'郑中岳','枝子组')}>郑中岳</button></li>
+                            <li><button onClick={this.signOnClick.bind(this,'陈格格','枝子组')}>陈格格</button></li>
                         </ul>
                     </li>
                     <li className="hs">
@@ -146,6 +147,8 @@ class Gather extends Component {
                             <li><button onClick={this.signOnClick.bind(this,'林启武','以诺组')}>林启武</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'彭成平','以诺组')}>彭成平</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'胡清洁','以诺组')}>胡清洁</button></li>
+                            <li><button onClick={this.signOnClick.bind(this,'吴等等','以诺组')}>吴等等</button></li>
+                            <li><button onClick={this.signOnClick.bind(this,'何余展','以诺组')}>何余展</button></li>
                         </ul>
                     </li>
                     <li className="fc" style={{textAlign:'center'}}>
