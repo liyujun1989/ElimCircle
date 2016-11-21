@@ -5,7 +5,7 @@
     "start": "node server.js",
     "prod": "webpack --config webpack.production.config.js"
   },
-  "description": "以琳-摇奖转盘",
+  "description": "以琳-前端",
   "main": "server.js",
   "repository": {
     "type": "git",
