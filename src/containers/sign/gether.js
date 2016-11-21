@@ -90,7 +90,7 @@ class Gather extends Component {
                         <ul>
                             <li><button onClick={this.signOnClick.bind(this,'黄雪婷','活石组')}>黄雪婷</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'许文凯','活石组')}>许文凯</button></li>
-                            <li><button onClick={this.signOnClick.bind(this,'张凯特','活石组')}>张凯特</button></li>
+                            <li><button onClick={this.signOnClick.bind(this,'张恺特','活石组')}>张恺特</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'包莹莹','活石组')}>包莹莹</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'胡习文','活石组')}>胡习文</button></li>
                             <li><button onClick={this.signOnClick.bind(this,'孙佳君','活石组')}>孙佳君</button></li>

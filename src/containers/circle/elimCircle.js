@@ -47,7 +47,10 @@ class ElimCircle extends Component {
     endClick() {
         clearTimeout(t);
         nList[i].style.backgroundColor = "#CCFF00";
+        let chose = document.getElementById("chooseName");
+        chose.innerHTML = nList[i].innerHTML;
     }
+
 
     componentWillMount() {
         elimCircle.use();
@@ -71,6 +74,7 @@ class ElimCircle extends Component {
         return(
             <div style={{textAlign:"center"}}>
                 <div className="title">以琳·聚会随机点名</div>
+                <div id="chooseName" className="choose"></div>
                 <div className="box">
                     {this.state.nameList.map(n=>{ return <div className="boxName" key={_.uniqueId("nameList")}>{n}</div> })}
                 </div>
