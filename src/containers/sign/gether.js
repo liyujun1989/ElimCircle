@@ -72,7 +72,6 @@ class Gather extends Component {
                 sels[this.index].style.display = 'block';
             }
         }
-
     }
 
     render() {
