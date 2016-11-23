@@ -1,4 +1,4 @@
 {
   "presets":["react","latest"],
-  "plugins": [["import", { "libraryName": "antd", "style": "css" }]]
+  "plugins": ["react-hot-loader/babel"]
 }

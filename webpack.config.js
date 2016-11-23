@@ -22,14 +22,14 @@ var config = {
             {test: /\.css$/, loaders: ['style/useable', 'css']},
             {test: /\.(png|jpg|woff|woff2|gif)$/, loader: 'url-loader?limit=8192'},
             {test: /\.json$/, loader: "json"},
-            {test: /\.js$/, loaders: ['react-hot', 'babel'], include: [path.join(__dirname, 'src')]}
+            {test: /\.js$/, loader: 'babel', include: path.join(__dirname, 'src')}
         ]
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new webpack.DefinePlugin({
             'process.env': {
-                'DEBUG': false
+                'DEBUG': true
             }
         })
     ]
